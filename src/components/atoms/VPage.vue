@@ -61,7 +61,7 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
+  width: 48px;
   height: 22px;
   margin: 0 2px;
   color: $black_02;
