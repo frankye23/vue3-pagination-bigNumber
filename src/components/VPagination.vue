@@ -1,5 +1,6 @@
 <template>
-  <ul class="Pagination">
+  <div class="pagination-container">
+    <ul class="Pagination">
     <li v-if="!hideFirstButton" class="PaginationControl">
       <icon-page-first
         class="Control"
@@ -37,6 +38,12 @@
       />
     </li>
   </ul>
+  <div class="goto-container">
+    <div class="goto-label">Go to page</div>
+    <input class="goto-input" type="number" min="1" @blur="handleBlur()" />
+  </div>
+  </div>
+  
 </template>
 
 <script lang="ts">
@@ -160,6 +167,15 @@ export default defineComponent({
       }
     }
 
+    function handleBlur () {
+      const input = document.querySelector('.goto-input') as HTMLInputElement;
+      const value = parseInt(input.value);
+      if (value > 0 && value <= props.pages) {
+        emit('update:modelValue', value);
+      }
+      input.value = '';
+    }
+
     return {
       pagination,
       updatePageHandler,
@@ -169,6 +185,7 @@ export default defineComponent({
       goToLast,
       goToPrev,
       goToNext,
+      handleBlur
     };
   },
 });
@@ -190,6 +207,27 @@ export default defineComponent({
 .PaginationControl {
   display: flex;
   align-items: center;
+}
+
+.pagination-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.goto-container {
+  .goto-label {
+    margin-right: 1rem;
+  }
+  .goto-input {
+    width: 40px;
+  }
+  display:flex;
+  margin-left: 1rem;
 }
 
 .Control {

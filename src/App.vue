@@ -1,6 +1,6 @@
 <template>
   <div class="App">
-    <v-pagination v-model="page" :range-size="1" :pages="10" />
+    <v-pagination v-model="page" :range-size="1" :pages="10000" />
   </div>
 </template>
 
