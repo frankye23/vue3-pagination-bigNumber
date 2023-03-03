@@ -9,7 +9,7 @@ export default [
     output: {
       compact: true,
       format: 'esm',
-      file: 'dist/vue3-pagination.esm.js',
+      file: 'dist/vue3-pagination-bigNumber.esm.js',
     },
     plugins: [
       typescript(),
@@ -24,7 +24,7 @@ export default [
     output: {
       compact: true,
       format: 'cjs',
-      file: 'dist/vue3-pagination.cjs.js',
+      file: 'dist/vue3-pagination-bigNumber.cjs.js',
       exports: 'default',
     },
     plugins: [typescript(), svg(), scss(), vue({ css: false })],
