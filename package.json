@@ -3,15 +3,6 @@
   "version": "1.0.17",
   "author": "frankye23",
   "description": "A Vue 3 component for pagination.",
-  "homepage": "https://github.com/HENNGE/vue3-pagination",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HENNGE/vue3-pagination.git"
-  },
-  "bugs": {
-    "url": "https://github.com/HENNGE/vue3-pagination/issues",
-    "email": "julian.springaux@hennge.com"
-  },
   "license": "MIT",
   "private": false,
   "engines": {
@@ -25,7 +16,7 @@
   ],
   "main": "dist/vue3-pagination-bigNumber.cjs.js",
   "module": "dist/vue3-pagination-bigNumber.esm.js",
-  "style": "dist/vue3-pagination.css",
+  "style": "dist/vue3-pagination-bigNumber.css",
   "types": "dist//src/components/VPagination.vue.d.ts",
   "files": [
     "src/components",
